@@ -1,0 +1,200 @@
+/* Header */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* =================  navbar ================= */
+
+.logo-image {
+  width: 100px;
+}
+
+.search-icon {
+  width: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #b21c1c;
+  font-weight: bold;
+}
+
+/* search */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ffc107; /* Yellow border */
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden; /* Ensures button stays within rounded border */
+  background-color: #fff; /* White background */
+  /* padding: 2px;  */
+}
+
+.search-input {
+  border: none; /* Remove input border */
+  outline: none; /* Remove input outline */
+  padding: 8px 10px; /* Padding inside input */
+  flex: 1; /* Input takes up remaining space */
+  font-size: 14px; /* Adjust font size */
+}
+
+.search-button {
+  background-color: #ffc107; /* Yellow background for button */
+  border: none; /* Remove button border */
+  color: #000; /* Black icon color */
+  padding: 8px 10px; /* Padding inside button */
+  cursor: pointer; /* Show pointer on hover */
+  font-size: 18px; /* Adjust icon size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-icon img {
+  width: 30px;
+}
+
+/* Style untuk logo */
+.logo {
+  height: 24px;
+  width: auto;
+}
+
+.icon-profile {
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+}
+
+.nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #900;
+  font-weight: bold;
+}
+
+/* ================= batas navbar ================= */
+
+.banner {
+  position: relative;
+  background: url('/assets/img/wp13688805\ 3.png') no-repeat center center/cover; /* Replace with your background image */
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.banner-text {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 20px;
+}
+
+/* ================= footer ================= */
+.footer {
+  background-color: #8b1b1b; /* Warna merah gelap sesuai dengan gambar */
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Main Content */
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.content p,
+.content ul {
+  margin-bottom: 20px;
+}
+
+.content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.content ul li {
+  margin-bottom: 10px;
+}
+
+.sub-li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Reset CSS */
+
+/* Style untuk tautan */
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

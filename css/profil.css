@@ -1,0 +1,182 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header */
+    .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header .logo {
+    font-weight: bold;
+    color: #900;
+    height: auto;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+  
+  .search-bar button {
+    padding: 8px;
+    border: none;
+    background-color: #900;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  .nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #900;
+    font-weight: bold;
+  }
+
+/* Main styling */
+main {
+    display: flex;
+    padding: 100px;
+}
+
+aside {
+    width: 240px;
+    padding-left: 70px;
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+aside ul li {
+    padding: 10px;
+    color: #888;
+    cursor: pointer;
+}
+
+aside ul li.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.profile-section {
+    flex: 1;
+    padding-left: 90px;
+    padding-right: 70px;
+    padding-bottom: 20px;
+}
+
+.profile-card {
+    background-color: #f9f9f9;
+    border: 1px solid #c5bfbf;
+    padding: 80px;
+    border-radius: 10px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    color: #666;
+    margin: 3px 0;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.biografi p {
+    margin-top: 20px;
+}
+.komunitas {
+    width: 48%;
+}
+
+.biografi h3,
+.komunitas h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.komunitas a {
+    margin-right: 10px;
+}
+
+.community-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* Footer */
+.footer {
+    background-color: #9b111e;
+    padding: 20px 40px;
+    color: #fff;
+    }
+    
+    .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    }
+    
+    .footer-logo p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    }
+    
+    .footer-links {
+    display: flex;
+    gap: 30px;
+    }
+    
+    .footer-links a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+    text-decoration: underline;
+    }

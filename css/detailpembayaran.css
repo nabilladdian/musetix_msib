@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #900;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 8px;
+  border: none;
+  background-color: #900;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #900;
+  font-weight: bold;
+}
+
+/* Timeline container */
+.timeline {
+display: flex;
+align-items: center;
+justify-content:space-around;
+position: relative;
+margin: 20px;
+padding: 0;
+list-style-type: none;
+}
+
+/* Line connecting the circles */
+.timeline::before {
+content: '';
+position:absolute;
+top: 8%;
+left: 9%;
+right: 9%;
+height: 5px;
+background-color: #ccc;
+z-index: -1;
+}
+
+/* Each step in the timeline */
+.timeline-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+width: 100px;
+text-align: center;
+color: gray;
+}
+
+/* Circle for each step */
+.circle {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: #ccc;
+margin-bottom: 5px;
+position: relative;
+}
+
+/* Active step styling */
+.timeline-item.active .circle {
+background-color: black;
+}
+
+.timeline-item.active {
+color: black;
+}
+
+main {
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.ticket-info {
+display: flex;
+background-color: #fdf5e6;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+border-radius: 15px;
+width: 320px;
+position: relative;
+flex-direction: column;
+align-items: center;
+}
+
+.event-image {
+width: 100%;
+height: auto;
+border-radius: 10px;
+margin-bottom: 15px;
+}
+
+.ticket-details {
+text-align: left;
+width: 100%;
+}
+
+.ticket-details h2 {
+color: #333;
+font-size: 20px;
+margin-bottom: 5px;
+}
+
+.ticket-details .event-category {
+color: #666;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.ticket-details p {
+color: #666;
+font-size: 14px;
+margin: 5px 0;
+display: flex;
+align-items: center;
+}
+
+.ticket-details .map-link {
+color: #c61a1a;
+font-size: 12px;
+text-decoration: none;
+display: block;
+margin-top: 10px;
+}
+
+.ticket-selection {
+display: flex;
+align-items: center;
+margin: 15px 0;
+padding: 10px;
+background-color: #f0f0f0;
+border-radius: 8px;
+width: 100%;
+justify-content: space-between;
+}
+
+.ticket-selection span {
+background-color: #ffc107;
+padding: 10px;
+border-radius: 5px;
+font-size: 18px;
+color: #333;
+}
+
+.details-link {
+font-size: 12px;
+color: #c61a1a;
+text-decoration: none;
+}
+
+.popularity-button {
+display: inline-block;
+padding: 8px 20px;
+background-color: #ffc107;
+color: #c61a1a;
+border: none;
+border-radius: 5px;
+font-size: 14px;
+cursor: pointer;
+width: 300px;
+margin-top: 20px;
+text-align: center;
+}
+
+/* Footer */
+.footer {
+background-color: #9b111e;
+padding: 20px 40px;
+color: #fff;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: auto;
+}
+
+.footer-logo p {
+font-size: 24px;
+font-weight: bold;
+margin: 0;
+}
+
+.footer-links {
+display: flex;
+gap: 30px;
+}
+
+.footer-links a {
+color: #fff;
+font-size: 14px;
+text-decoration: none;
+}
+
+.footer-links a:hover {
+text-decoration: underline;
+}

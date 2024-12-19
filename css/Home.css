@@ -1,0 +1,99 @@
+/* Banner Styles */
+.ban {
+  text-align: center;
+  background-size: cover;
+  background: url('/assets/img/Banner.png') no-repeat center center/cover;
+  padding: 10px 20px;
+  color: #fff;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ban-content h1 {
+  font-size: 2.5rem;
+}
+
+.ban-content p {
+  margin: 10px 0;
+}
+
+/* Category Buttons */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn-category {
+  padding: 10px 20px;
+  background-color: #900;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Event Section */
+.event-section {
+  padding: 20px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.event-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.event-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.btn-available {
+  background-color: #090;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-more {
+  display: block;
+  margin: 20px auto;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Call to Action Section */
+.cta {
+  text-align: center;
+  /* background: #f5f5f5; */
+  padding: 150px 20px;
+  background: url('/assets/img/Banner2.png') no-repeat center center/cover;
+  height: auto;
+}
+
+.cta h2 {
+  margin-bottom: 10px;
+}
+
+.btn-cta {
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}

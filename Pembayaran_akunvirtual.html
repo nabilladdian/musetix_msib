@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museix Payment</title>
+    <link href="bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Navbar styling */
+        .navbar {
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+            padding: 1rem;
+        }
+
+        .navbar-brand img {
+            height: 30px;
+        }
+
+        .navbar a {
+            color: #b91d23;
+            font-weight: 500;
+        }
+
+        .navbar a:hover {
+            color: darkred;
+        }
+
+         /* Progress Circles */
+         .progress-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            position: relative;
+            padding: 0 30px;
+        }
+
+        .progress-circle {
+            width: 14px;
+            height: 14px;
+            background-color: #d3d3d3;
+            border-radius: 50%;
+            display: inline-block;
+            z-index: 1;
+        }
+
+        .progress-circle.active {
+            background-color: #000000;
+        }
+
+        .progress-step-label {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #555;
+            width: 70px;
+        }
+
+        .progress-line {
+            position: absolute;
+            top: 5px;
+            left: 30px;
+            right: 30px;
+            height: 3px;
+            background-color: #d3d3d3;
+            z-index: 0;
+        }
+
+        .progress-line-filled {
+            position: absolute;
+            top: 5px;
+            left: 30px;
+            height: 3px;
+            background-color: #000000;
+            z-index: 1;
+            width: 75%; /* Filled until the fourth step */
+        }
+        /* Countdown Timer */
+        .countdown-timer {
+            font-weight: bold;
+            color: #b91d23;
+            font-size: 1.5rem;
+        }
+
+        /* Search bar */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-control {
+            width: 300px;
+            border: 2px solid #FFD700;
+            border-radius: 50px 0 0 50px;
+            padding-left: 15px;
+            font-size: 0.9rem;
+        }
+
+        .search-button {
+            background-color: #FFD700;
+            border: none;
+            padding: 10px;
+            border-radius: 0 50px 50px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-button img {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Form Styling */
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group input {
+            border: 2px solid #FFD700;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%; /* Ensures all fields are the same width */
+        }
+
+        .form-group button {
+            border-radius: 5px;
+        }
+
+        .form-container .form-group:last-child {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Button styling */
+        .btn-yellow {
+            background-color: #FFD700;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+     /* Footer */
+     footer {
+            background-color: #b91d23;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        /* Title Alignment */
+        .akun-bank-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-align: center;
+            flex: 1; /* Ensure title and timer are on the same line */
+        }
+
+        /* Custom positioning for buttons */
+        /* Transparent background with red border and hover effect for Selanjutnya button */
+        .btn-small-center {
+            width: 150px;
+            font-size: 1rem;
+            margin: 0 auto;
+            display: block;
+            background-color: transparent;
+            border: 2px solid #FFD700; /* Red border */
+            color: #FFD700; /* Red text */
+            transition: all 0.3s ease;
+        }
+
+        .btn-small-center:hover {
+            background-color: #b91d23;
+            border: #b91d23;
+            color: white;
+        }
+
+        /* Button Salin No. Virtual with rounded corners */
+                .btn-right {
+            width: 150px; /* Set the width of the button */
+            height: 10px; /* Adjust height to ensure text fits well */
+            font-size: 0.9rem; /* Adjust font size to fit the text */
+            margin-left: auto;
+            margin-right: 0;
+            display: flex;
+            justify-content: center; /* Center the text horizontally */
+            align-items: center; /* Center the text vertically */
+            text-align: center; /* Ensure the text is aligned in the center */
+            white-space: nowrap; /* Prevent the text from wrapping */
+            border-radius: 25px; /* Rounded corners */
+            transition: all 0.3s ease;
+        }
+
+
+        .next-btn-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1; /* Menjaga tombol tetap di atas konten lain */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="logomr.png" alt="Museix"></a>
+            <form class="d-flex search-container">
+                <input class="form-control" type="search" placeholder="Cari event, komunitas, dan kategori" aria-label="Search">
+                <button class="search-button"><img src="search.png" alt="search" class="search-icon" /></button>
+            </form>
+            <div>
+                <a href="#" class="me-3">Beranda</a>
+                <a href="#" class="me-3">Event</a>
+                <a href="#" class="me-3">Tiket</a>
+                <a href="#"><img src="profile.png" alt="Profile" style="width: 25px; height: 25px;"></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progress Circles and Countdown Timer -->
+    <div class="container mt-5">
+        <div class="progress-steps">
+            <div class="progress-circle active"></div>
+            <div class="progress-circle active"></div>
+            <div class="progress-circle active"></div>
+            <div class="progress-circle active"></div>
+            <div class="progress-circle active"></div>
+            <div class="progress-circle"></div>
+            <div class="progress-line"></div>
+            <div class="progress-line-filled"></div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <span class="progress-step-label">Pembayaran Tiket</span>
+            <span class="progress-step-label">Masukkan Data Diri</span>
+            <span class="progress-step-label">Pilih Pembayaran</span>
+            <span class="progress-step-label">Verifikasi Kode</span>
+            <span class="progress-step-label">Konfirmasi Pembayaran</span>
+            <span class="progress-step-label">Pembayaran Selesai</span>
+        </div>
+
+        <!-- Title and Countdown Timer -->
+        <div class="d-flex align-items-center justify-content-between mt-4">
+            <h3 class="akun-bank-title">AKUN BANK VIRTUAL</h3>
+            <div class="countdown-timer" id="countdown">10:00</div>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="container mt-4">
+        <div class="form-container mx-auto" style="max-width: 500px;">
+            <div class="form-group mb-3">
+                <label>Nama Depan</label>
+                <input type="text" class="form-control" placeholder="ketik Nama depan kamu">
+            </div>
+            <div class="form-group mb-3">
+                <label>Nama Belakang</label>
+                <input type="text" class="form-control" placeholder="ketik Nama belakang kamu">
+            </div>
+            <div class="form-group mb-3">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="ketik email kamu">
+            </div>
+            <div class="form-group mb-3">
+                <label>No. Telepon</label>
+                <input type="tel" class="form-control" placeholder="ketik No. telepon kamu">
+            </div>
+            <div class="form-group mb-3">
+                <label>Bank Tujuan</label>
+                <input type="tel" class="form-control" placeholder="ketik bank tujuan yang kamu mau">
+            </div>
+            <div class="form-group mb-3">
+                <label>No. Akun Virtual</label>
+                <input type="tel" class="form-control" placeholder="ini no akun virtual kamu">
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-yellow btn-small btn-right">Salin No. Virtual</button>
+            </div>
+        </div>
+    </div>
+    <br><button class="btn btn-yellow btn-small btn-small-center">Selanjutnya</button></br>
+    <!-- Footer -->
+   <!-- Footer -->
+   <footer class="text-center mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3 text-start">
+                <img src="logowt.png" alt="MuseTix Logo">
+            </div>
+            <div class="col-md-9 text-start">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="#">Tentang kami</a><br>
+                        <a href="#">Kebijakan Privasi</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#">Syarat dan Ketentuan</a><br>
+                        <a href="#">Pusat Bantuan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

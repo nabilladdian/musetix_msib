@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifikasi Kode</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .verification-container, .success-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            display: none; /* Hidden initially */
+        }
+        .verification-container {
+            display: block; /* Show verification container initially */
+        }
+        .success-container h1 {
+            font-size: 2rem;
+            color: #000000;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .success-container p {
+            color: #000000;
+            font-size: 1.1rem;
+        }
+        .success-container strong {
+            color: #b91d23;
+        }
+        .verify-button, .home-button {
+            background-color: transparent;
+            color: #FFD700;
+            border: 2px solid #FFD700;
+            border-radius: 50px;
+            padding: 10px 30px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .verify-button:hover, .home-button:hover {
+            color: #ffffff;
+            border-color: #b91d23;
+            background-color: #b91d23;
+        }
+        .code-input {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 0 5px;
+        }
+        
+        .resend-link {
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .resend-timer {
+            color: #b91d23;
+            font-weight: bold;
+        }
+        .resend-container {
+            margin-left: 220px; /* Menggeser hanya teks kirim ulang kode dan kirim kode */
+        }
+        .error-message {
+            color: red;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none; /* Hidden initially */
+        }
+        .success-container img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        /* Adjusted styles */
+        .verification-container img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px; /* Small spacing between logo and "Masukan Kode Verifikasi" */
+
+        }
+        .verification-container h5 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin: 0; /* Adds slight separation from the logo */
+        }
+        .verification-container p {
+            font-size: 0.85rem;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Verification Container -->
+    <div class="verification-container">
+        <img src="logomr.png" alt="MuseTix Logo">
+        <h5>Masukan Kode Verifikasi</h5>
+        <p>Kode verifikasi telah dikirim ke emailmu</p>
+        
+        <div class="d-flex justify-content-center mb-3">
+            <type="text" maxlength="1" class="code-input" id="code1">
+            <type="text" maxlength="1" class="code-input" id="code2">
+            <type="text" maxlength="1" class="code-input" id="code3">
+            <type="text" maxlength="1" class="code-input" id="code4">
+            <type="text" maxlength="1" class="code-input" id="code5">
+            <type="text" maxlength="1" class="code-input" id="code6">
+        </div>
+       
+        <p><span class="resend-container" onclick="resendCode()"></span>kirim ulang kode?<span class="resend-link" onclick="resendCode()"> kirim kode</span> <span class="resend-timer" id="timer">60</span></p>
+        
+        <!-- Error message -->
+        <p class="error-message" id="error-message">Harap masukkan kode verifikasi lengkap.</p>
+
+        <button class="btn verify-button" onclick="verifyCode()">Verifikasi Kode</button>
+    </div>
+
+    <!-- Success Container -->
+    <div class="success-container">
+        <div>
+            <img src="ceklis.png" alt="Verifikasi Berhasil">
+            <h1>Verifikasi Berhasil</h1>
+            <p>Selamat datang di <strong>MuseTix</strong>,<br>temukan pertunjukkan impianmu bersama kami</p>
+            <button class="btn home-button" onclick="goToHome()">Beranda</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Simulasi pengiriman kode verifikasi ke email
+    const generatedCode = generateVerificationCode();
+    console.log('Kode Verifikasi:', generatedCode);  // Untuk keperluan debugging, dapat dilihat di konsol
+
+    // Fungsi untuk menghasilkan kode verifikasi acak (6 digit)
+    function generateVerificationCode() {
+        let code = '';
+        for (let i = 0; i < 6; i++) {
+            code += Math.floor(Math.random() * 10);  // Menghasilkan angka acak antara 0 dan 9
+        }
+        return code;
+    }
+
+    // Fungsi untuk memverifikasi kode yang dimasukkan
+    function verifyCode() {
+        const enteredCode = [
+            document.getElementById('code1').value,
+            document.getElementById('code2').value,
+            document.getElementById('code3').value,
+            document.getElementById('code4').value,
+            document.getElementById('code5').value,
+            document.getElementById('code6').value
+        ].join('');
+
+        const correctCode = '123456';
+
+        // Memeriksa apakah ada input yang kosong
+        if (enteredCode.length < 6) {
+            showErrorMessage('Harap masukkan kode verifikasi lengkap.');
+        } else if (enteredCode === correctCode) {
+            showSuccessMessage();
+        } else {
+            showErrorMessage('Kode yang dimasukkan salah. Silakan coba lagi.');
+        }
+    }
+
+    // Menampilkan pesan sukses
+    function showSuccessMessage() {
+        document.querySelector('.verification-container').style.display = 'none';
+        document.querySelector('.success-container').style.display = 'block';
+    }
+
+    // Menampilkan pesan kesalahan
+    function showErrorMessage(message) {
+        const errorMessageElement = document.getElementById('error-message');
+        errorMessageElement.textContent = message;  // Set pesan kesalahan
+        errorMessageElement.style.display = 'block';  // Tampilkan pesan kesalahan
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Form Container for Sign In -->
+        <div class="frame">
+            <div class="form-container">
+                <h1 class="title">MuseTix</h1>
+                <p>Sudah punya akun? Masuk dulu gih...</p>
+                <form action="your_login_endpoint" method="post">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Masukkan email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Masukkan password" required>
+                    </div>
+                    <button type="submit" class="main-btn">Masuk</button>
+                </form>
+                
+                <div class="separator">
+                    <hr class="line"><span>atau</span><hr class="line">
+                </div>
+                
+                <button class="google-btn">
+                    <img src="google.png" alt="Google Icon" class="google-icon">
+                    Masuk dengan akun Google
+                </button>
+                
+                <p class="signup-text">Belum punya akun? <a href="Sign Up.html">daftar</a></p>
+            </div>
+
+            <!-- Side Image Container -->
+            <div class="image-container">
+                <img src="wp.jpg" alt="Concert" class="side-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
