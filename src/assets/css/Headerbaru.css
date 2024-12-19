@@ -1,0 +1,121 @@
+/* =================  navbar ================= */
+
+/* Styling untuk Navbar */
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  z-index: 1000; /* Pastikan header berada di atas */
+  box-sizing: border-box; /* Pastikan padding tidak merusak layout */
+  width: 100%; /* Pastikan navbar mengambil lebar penuh */
+  overflow: hidden; /* Menghindari konten yang meluber */
+  min-height: 60px; /* Pastikan navbar memiliki tinggi minimum */
+}
+
+/* Styling untuk tautan di navbar */
+.navbar-links a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #333;
+  font-size: 16px; /* Sesuaikan ukuran font untuk tampilan lebih baik */
+  padding: 5px 10px;
+}
+
+/* Menyesuaikan tampilan untuk perangkat kecil */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .navbar-links a {
+      margin: 5px 0;
+      font-size: 14px; /* Ukuran font lebih kecil pada perangkat kecil */
+  }
+}
+
+/* Penyesuaian untuk logo dan ikon */
+.logo-image {
+  width: 100px;
+}
+
+.search-icon {
+  width: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #b21c1c;
+  font-weight: bold;
+}
+
+/* Styling search bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ffc107; /* Yellow border */
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden; /* Ensures button stays within rounded border */
+  background-color: #fff; /* White background */
+}
+
+.search-input {
+  border: none; /* Remove input border */
+  outline: none; /* Remove input outline */
+  padding: 8px 10px; /* Padding inside input */
+  flex: 1; /* Input takes up remaining space */
+  font-size: 14px; /* Adjust font size */
+}
+
+.search-button {
+  background-color: #ffc107; /* Yellow background for button */
+  border: none; /* Remove button border */
+  color: #000; /* Black icon color */
+  padding: 8px 10px; /* Padding inside button */
+  cursor: pointer; /* Show pointer on hover */
+  font-size: 18px; /* Adjust icon size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-icon img {
+  width: 30px;
+}
+
+/* Style untuk logo */
+.logo {
+  height: 24px;
+  width: auto;
+}
+
+.icon-profile {
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+}
+
+/* Style untuk menu links */
+.nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #900;
+  font-weight: bold;
+}
+
+/* Prevent layout shift */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

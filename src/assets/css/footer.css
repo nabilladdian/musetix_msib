@@ -1,0 +1,93 @@
+footer {
+  background-color: #b91d23; /* Warna utama footer */
+  color: white; /* Warna teks */
+  padding: 20px 0; /* Spasi dalam footer */
+  margin: 0; /* Hilangkan margin luar */
+  border: none; /* Hilangkan border jika ada */
+  box-shadow: none; /* Hilangkan bayangan jika ada */
+}
+
+/* Hilangkan latar belakang elemen dalam footer */
+footer .container,
+footer .row,
+footer .col-md-3,
+footer .col-md-9 {
+  background-color: transparent !important; /* Tidak ada latar belakang */
+  margin: 0; /* Hilangkan margin */
+  padding: 0; /* Hilangkan padding */
+}
+
+/* Styling gambar di footer */
+footer img {
+  width: 100px; /* Lebar gambar */
+  height: auto; /* Tinggi otomatis */
+  margin-right: 10px; /* Jarak gambar ke elemen lain */
+  background-color: transparent; /* Pastikan gambar tidak punya latar belakang */
+}
+
+/* Styling link di footer */
+footer a {
+  color: white; /* Warna link */
+  text-decoration: none; /* Hilangkan garis bawah */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Atur semua margin dan padding elemen dalam footer */
+footer .container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+footer .row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+footer .col-md-3,
+footer .col-md-9 {
+  padding: 0;
+  margin: 0;
+}
+
+/* Hilangkan radius sudut atau shadow bawaan */
+footer,
+footer .container {
+  border-radius: 0 !important; /* Hilangkan radius */
+  box-shadow: none !important; /* Hilangkan shadow */
+}
+
+/* Atur padding bawaan HTML/body agar tidak memengaruhi footer */
+html,
+body {
+  margin: 0; /* Hilangkan margin pada body */
+  padding: 0; /* Hilangkan padding pada body */
+  background: none; /* Pastikan tidak ada warna latar untuk body */
+}
+/* Geser logo */
+footer .col-md-3 {
+  padding-left: 20px; /* Geser logo ke kanan */
+}
+
+/* Geser teks */
+footer .col-md-9 {
+  padding-left: 20px; /* Geser teks ke kanan */
+}
+
+.content {
+  text-align: justify; /* Mengatur teks menjadi justify */
+  line-height: 1.6; /* Menambahkan jarak antar baris untuk keterbacaan */
+  margin: 0 auto; /* Mengatur margin otomatis untuk pusat konten */
+  max-width: 800px; /* Mengatur lebar maksimum untuk konten */
+}
+
+.content p,
+.content ul {
+  text-align: justify; /* Mengatur teks dalam paragraf dan daftar menjadi justify */
+}
+
+.content ul {
+  padding-left: 20px; /* Menambahkan padding untuk daftar */
+}

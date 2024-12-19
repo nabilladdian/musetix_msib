@@ -1,0 +1,285 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
+  color: #212529;
+  background-color: #fff;
+  padding-bottom: 80px; 
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.banner {
+  position: relative;
+  background: url('/assets/img/wp13688805%203.png') no-repeat center center; /* Sesuaikan dengan path gambar Anda */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  background-attachment: fixed; /* Tambahkan efek parallax jika diinginkan */
+  height: 100vh; /* Tinggi penuh layar */
+  width: 100vw; /* Lebar penuh layar */
+  display: flex; /* Flexbox untuk memusatkan teks */
+  align-items: center; /* Vertikal tengah */
+  justify-content: center; /* Horizontal tengah */
+  color: #fff; /* Warna teks putih */
+  text-align: center; /* Pusatkan teks */
+  overflow: hidden; /* Pastikan tidak ada elemen yang meluap */
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay hitam transparan untuk kontras teks */
+  z-index: 1; /* Overlay berada di atas gambar */
+}
+
+.banner-text {
+  position: relative; /* Pastikan teks berada di atas overlay */
+  z-index: 2; /* Prioritas teks lebih tinggi dari overlay */
+}
+
+.banner-text h1 {
+  font-size: 3rem; /* Ukuran teks besar */
+  font-weight: bold; /* Tebalkan teks */
+  margin-bottom: 0.5rem; /* Jarak bawah teks utama */
+}
+
+.banner-text p {
+  font-size: 1.5rem; /* Ukuran teks deskripsi */
+}
+
+.logo-image {
+  width: 300px; /* Updated width for larger logo */
+}
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #b21c1c;
+  font-weight: bold;
+}
+
+.footer {
+  position: fixed; /* Tetap berada di bagian bawah layar */
+  bottom: 0; /* Pastikan footer berada di bawah */
+  left: 0; /* Pastikan footer mulai dari ujung kiri */
+  width: 100vw; /* Lebar penuh layar */
+  background-color: #8b1b1b; /* Warna merah gelap */
+  color: white;
+  padding: 20px 50px; /* Ruang di dalam footer */
+  display: flex; /* Gunakan flexbox untuk tata letak */
+  justify-content: space-between; /* Spasi antara elemen */
+  align-items: center; /* Vertikal tengah */
+  box-sizing: border-box; /* Hitung padding dalam lebar elemen */
+  z-index: 1000; /* Pastikan berada di atas elemen lain jika diperlukan */
+}
+
+.logo {
+  height: 24px;
+  width: 100px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Menambahkan responsif agar lebih baik */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px;
+  }
+}
+
+/* Improved Code */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
+  color: #212529;
+  background-color: #fff;
+  padding-bottom: 80px; 
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.banner {
+  position: relative;
+  background: url('/assets/img/wp13688805%203.png') no-repeat center center; /* Sesuaikan dengan path gambar Anda */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  background-attachment: fixed; /* Tambahkan efek parallax jika diinginkan */
+  height: 100vh; /* Tinggi penuh layar */
+  width: 100vw; /* Lebar penuh layar */
+  display: flex; /* Flexbox untuk memusatkan teks */
+  align-items: center; /* Vertikal tengah */
+  justify-content: center; /* Horizontal tengah */
+  color: #fff; /* Warna teks putih */
+  text-align: center; /* Pusatkan teks */
+  overflow: hidden; /* Pastikan tidak ada elemen yang meluap */
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay hitam transparan untuk kontras teks */
+  z-index: 1; /* Overlay berada di atas gambar */
+}
+
+.banner-text {
+  position: relative; /* Pastikan teks berada di atas overlay */
+  z-index: 2; /* Prioritas teks lebih tinggi dari overlay */
+}
+
+.banner-text h1 {
+  font-size: 3rem; /* Ukuran teks besar */
+  font-weight: bold; /* Tebalkan teks */
+  margin-bottom: 0.5rem; /* Jarak bawah teks utama */
+}
+
+.banner-text p {
+  font-size: 1.5rem; /* Ukuran teks deskripsi */
+}
+
+.logo-image {
+  width: 100px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #b21c1c;
+  font-weight: bold;
+}
+
+.footer {
+  position: fixed; /* Tetap berada di bagian bawah layar */
+  bottom: 0; /* Pastikan footer berada di bawah */
+  left: 0; /* Pastikan footer mulai dari ujung kiri */
+  width: 100vw; /* Lebar penuh layar */
+  background-color: #8b1b1b; /* Warna merah gelap */
+  color: white;
+  padding: 20px 50px; /* Ruang di dalam footer */
+  display: flex; /* Gunakan flexbox untuk tata letak */
+  justify-content: space-between; /* Spasi antara elemen */
+  align-items: center; /* Vertikal tengah */
+  box-sizing: border-box; /* Hitung padding dalam lebar elemen */
+  z-index: 1000; /* Pastikan berada di atas elemen lain jika diperlukan */
+}
+
+.logo {
+  height: 24px;
+  width: 100px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Menambahkan responsif agar lebih baik */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px;
+  }
+}
+.navbar {
+  background-color: white; /* Mengubah background navbar menjadi putih */
+  border-bottom: 2px solid #ddd; /* Menambahkan garis bawah */
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #b91d23; /* Red color for the brand */
+  font-weight: bold;
+}
+.nav-link {
+  color: #b91d23; /* Red color for navbar links */
+}
+.nav-link:hover {
+  color: darkred; /* Darker red on hover */
+}

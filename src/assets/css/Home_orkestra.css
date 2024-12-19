@@ -1,0 +1,126 @@
+/* Banner Styles */
+.ban {
+  text-align: center;
+  background-size: cover;
+  background: url('/assets/img/Banner.png') no-repeat center center/cover;
+  padding: 10px 20px;
+  color: #fff;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ban-content h1 {
+  font-size: 2.5rem;
+}
+
+.ban-content p {
+  margin: 10px 0;
+}
+
+/* Category Buttons */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px 0;
+  width: 300px;
+}
+
+.btn-category {
+  padding: 10px 30px;
+  background-color: #900;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+}
+
+/* Event Section */
+.event-section {
+  padding: 20px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.event-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.event-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.btn-available {
+  background-color: #090;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-more {
+  display: block;
+  margin: 20px auto;
+  background-color: #d0a218;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Call to Action Section */
+.cta {
+  text-align: center;
+  padding: 150px 20px;
+  background: url('/public/assets/img/Banner2.png') no-repeat center center/cover;
+  height: auto;
+}
+
+.cta h2 {
+  margin-bottom: 10px;
+}
+
+.btn-cta {
+  background-color:  #d0a218;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.cta {
+  position: relative; /* Agar elemen anak dapat diposisikan relatif terhadap ini */
+  text-align: center; /* Memusatkan teks */
+  padding: 150px 20px; /* Ruang di dalam elemen */
+  color: black; /* Warna teks */
+  width: 120%; /* Pastikan lebar 100% */
+  overflow: hidden; /* Menghindari konten yang meluber */
+}
+
+.cta::before {
+  content: '';
+  position: absolute; /* Memposisikan gambar secara absolut */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/public/assets/img/buateventmuu.png') no-repeat center center; /* Ganti dengan path gambar Anda */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  z-index: -1; /* Menempatkan gambar di belakang konten */
+}
+
+.slide {
+  width: 100%; /* Set to 100% of the parent container */
+  height: auto; /* Maintain aspect ratio */
+}

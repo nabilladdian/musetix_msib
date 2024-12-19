@@ -1,0 +1,323 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+p {
+  font-size: 14;
+  font-family: sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h4 {
+  font-size: 20;
+  font-style: normal;
+}
+.card {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* nav */
+
+.logo-image {
+  width: 100px;
+}
+
+.search-icon {
+  width: 20px;
+  height: auto;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #b21c1c;
+  font-weight: bold;
+}
+
+/* search */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ffc107; /* Yellow border */
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden; /* Ensures button stays within rounded border */
+  background-color: #fff; /* White background */
+  /* padding: 2px;  */
+}
+
+.search-input {
+  border: none; /* Remove input border */
+  outline: none; /* Remove input outline */
+  padding: 8px 10px; /* Padding inside input */
+  flex: 1; /* Input takes up remaining space */
+  font-size: 14px; /* Adjust font size */
+}
+
+.search-button {
+  background-color: #ffc107; /* Yellow background for button */
+  border: none; /* Remove button border */
+  color: #000; /* Black icon color */
+  padding: 8px 10px; /* Padding inside button */
+  cursor: pointer; /* Show pointer on hover */
+  font-size: 18px; /* Adjust icon size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* batas */
+
+.user-icon img {
+  width: 30px;
+}
+
+/* Header */
+.icon-search {
+  width: 22px;
+  height: 22px;
+}
+header {
+  unicode-bidi: isolate;
+  vertical-align: auto;
+}
+ol,
+ul {
+  padding-left: 0rem;
+}
+.icon-profile {
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.header .logo {
+  font-weight: bold;
+  color: #900;
+  height: auto;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 8px;
+  border: none;
+  background-color: #fdd017;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+nav {
+  vertical-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #900;
+  font-weight: bold;
+}
+
+/* Profile Header */
+.profile-header {
+  background: url('banner.jpg') center / cover;
+  padding-left: 60px;
+  padding-top: 40px;
+  color: #333;
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: -100px;
+}
+
+.profile-info h1 {
+  margin-top: 10px;
+  font-size: 28px;
+  font-family: sans-serif;
+  color: #121212;
+}
+
+.profile-info p {
+  font-size: 14px;
+}
+
+.social-icons img {
+  width: 24px;
+  margin: 5px;
+}
+
+/* Events Section */
+.events {
+  padding: 20px;
+  width: 100%;
+  /* margin: 0 auto; */
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #c8102e;
+  margin-bottom: 20px;
+}
+
+.tab button {
+  background: none;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.tab button.active {
+  color: #c8102e;
+  border-bottom: 2px solid #c8102e;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.event-card {
+  /* display: flex; */
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.event-info h4 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.event-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.badge {
+  background-color: #ffd700;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.available {
+  color: #28a745;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  background-color: #8b1b1b; /* Warna merah gelap sesuai dengan gambar */
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style untuk logo */
+.logo {
+  height: 24px;
+  width: auto;
+}
+
+/* Style untuk tautan */
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* tambahan */
+div {
+  display: block;
+  unicode-bidi: isolate;
+  padding: 0;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: url('/assets/img/wp13688805 3.png') no-repeat center center/cover;
+}

@@ -1,0 +1,218 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header */
+    .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header .logo {
+    font-weight: bold;
+    color: #900;
+    height: auto;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+  
+  .search-bar button {
+    padding: 8px;
+    border: none;
+    background-color: #900;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  .nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #900;
+    font-weight: bold;
+  }
+
+  .main {
+    display: flex;
+    padding: 100px;
+    margin-left: 100px;
+}
+
+/* Styling for the aside section */
+.aside {
+    width: 100px;
+    padding-left: 100px;
+    text-decoration: none;
+    position: left; /* Ensures proper alignment */
+    display: left;
+    flex-direction: column; /* Align items vertically */
+    align-items: left; /* Align items to the left */
+}
+
+.aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.aside ul li {
+    padding: 100px;
+    color: #888;
+    cursor: pointer;
+    padding-left:100 ; /* Align items to the left */
+}
+
+.aside ul li.active {
+    color: #000;
+    font-weight: bold;
+    padding-left: 100px; /* Align items to the left */
+}
+
+.name-links a {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Ensure links span full width */
+    text-align: left;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left;
+    display: block; /* Pastikan link mengisi seluruh lebar item */
+    text-align: left;;
+}
+
+.profile-section {
+    flex: 1;
+    padding-right: 10px;
+    padding-bottom: 100px;
+}
+
+.profile-card {
+    background-color: #f9f9f9;
+    border: 1px solid #c5bfbf;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: right;
+    gap: 20px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    color: #666;
+    margin: 3px 0;
+}
+
+.profile-content {
+    display: flex;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.biografi p {
+    margin-top: 20px;
+}
+.komunitas {
+    width: 40%;
+}
+
+.biografi h3,
+.komunitas h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.komunitas a {
+    margin-right: 10px;
+}
+
+.community-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* Footer */
+.footer {
+    background-color: #9b111e;
+    padding: 20px 40px;
+    color: #fff;
+    }
+    
+    .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    }
+    
+    .footer-logo p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    }
+    
+    .footer-links {
+    display: flex;
+    gap: 30px;
+    }
+    
+    .footer-links a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    }  
+
+      .left-align {
+  text-align: left; /* Aligns text to the left */
+}
+
+.header, .footer {
+  text-align: left; /* Ensures header and footer text is also aligned left */
+}
+
+.name-links {
+  float: left; /* Aligns the sidebar to the left */
+  width: 200px; /* Set a width for the sidebar */
+}
+
+.profile-section {
+  margin-left: 220px; /* Adjust margin to prevent overlap with the sidebar */
+}
+
+/* Add any additional styles needed for left alignment */

@@ -1,0 +1,84 @@
+/* Navbar styling */
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem;
+}
+
+.navbar-brand img {
+    height: 30px;
+}
+
+.navbar a {
+    color: #b91d23;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: darkred;
+}
+
+.search-button {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px;
+    border-radius: 0 50px 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: 100%; /* Buat lebih fleksibel */
+    max-width: 200px; /* Panjang maksimum */
+}
+
+.search-container input {
+    border: 2px solid #fbc02d; /* Warna kuning di tepi */
+    border-radius: 20px 0 0 20px; /* Bentuk melengkung di kiri */
+    padding: 8px 15px;
+    height: 40px; /* Tinggi input */
+    font-size: 0.9rem;
+    outline: none;
+    flex-grow: 1; /* Supaya lebih panjang */
+}
+
+.search-container button {
+    background-color: #fbc02d;
+    border: none;
+    border-radius: 0 20px 20px 0; /* Bentuk melengkung di kanan */
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.search-container button img {
+    width: 18px; /* Ukuran ikon */
+    height: 18px;
+}
+
+.categories button {
+    padding: 10px 20px;
+    background: darkred;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background: darkred;
+}

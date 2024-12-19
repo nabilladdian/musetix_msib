@@ -1,0 +1,275 @@
+/* Event Detail Section */
+.event-details {
+    background-color: #fff;
+    padding: 20px;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    margin: 20px auto;
+    max-width: 1100px;
+    justify-content: center;
+  }
+  
+  /* Gambar besar */
+  .event-image {
+    max-width: 100%; /* Mencegah gambar melampaui lebar kontainer */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Atau gunakan contain sesuai kebutuhan */
+  }
+  
+  /* Teks di dalam gambar */
+  .event-image-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #fff; /* Latar belakang merah */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    
+  }
+  
+  /* Detail di bawah gambar */
+  .event-info {
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .event-info h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -50px;
+  }
+  
+  .event-info p {
+    margin: 15px 0;
+    font-size: 19px;
+    color: #555;
+    text-align: justify;
+  
+  }
+  
+  .event-info .btn {
+    background-color: #9b111e;
+    color: #fdd017;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid #fbc02d;
+    padding: 3px 70px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  
+  .event-info .btn:hover {
+    background-color: #9b111e;
+    color: #fff;
+    border-color: #9b111e;
+  }
+  
+  .event-info .btn-small {
+    background-color: #ffffff00;
+    color: #fdd017;
+    font-size: 13px;
+    font-weight: bold;
+    border: 3px solid #fbc02d;
+    padding: 3px 15px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  
+  .event-info .btn-small:hover {
+    background-color: #9b111e;
+    color: #fff;
+    border-color: #9b111e;
+  }
+  
+  .feature-box {
+    width: 1055px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    transition: .3s box-shadow;
+    background-color: #9b111e;
+    padding: 3px;
+    min-height: 100px;
+    height: 350px;
+    flex-basis: calc(25% - 20px); /* Lebar box diatur agar pas dengan 4 kolom */
+    margin: 10px; /* Tambahkan jarak antar elemen */
+  }
+  
+  .feature-box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .feature-box .content {
+    max-width: 30%;
+    order: 1;
+  }
+  
+  .feature-box p {
+    margin: 0 0 10px 20px;
+    color: rgb(243, 243, 243);
+    font-size: 16px;
+    flex: 0 0 auto; /* Atur agar elemen tidak menyusut */
+    max-width: none; /* Hapus batasan lebar */
+    white-space: nowrap; /* Hindari teks terputus di baris baru */
+  }
+  
+  .content p i {
+    display: block; /* Menampilkan elemen di baris baru */
+    margin-bottom: 8px; /* Memberikan jarak antar elemen */
+    color: rgb(243, 243, 243); /* Warna teks */
+    font-size: 15px; /* Ukuran teks */
+  }
+  
+  .feature-box p i {
+    display: block; /* Membuat elemen tampil di baris baru */
+    margin-bottom: 5px; /* Memberikan jarak antar teks */
+  }
+  
+  .feature-box img {
+    max-width: 80%;
+    height: 343px;
+    overflow: hidden;
+    border-radius: 3px;
+    order: 2;
+    width: 490px;
+    
+  }
+  
+  .feature-box h1{
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  .content .additional-icons {
+    display: flex; /* Membuat ikon tambahan menjadi Flexbox */
+    flex-direction: column; /* Menyusun ikon secara vertikal */
+    gap: 8px; /* Memberikan jarak antar ikon */
+    font-size: 20px; /* Ukuran ikon */
+  }
+  
+  
+  .rekomendasi-box {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 3px;
+    min-height: 100px;
+    height: 330px;
+    flex-basis: calc(20% - 20px); /*Set lebar untuk 4 kolom dengan jarak antar elemen */
+    margin: 0px; /* Tambahkan jarak antar elemen */
+  
+    /* max-width: 300px; */
+  }
+  
+  .rekomendasi-box .btn-rekomendasi{
+    background-color: #ffffff00;
+    color: #fdd017;
+    font-size: 13px;
+    font-weight: bold;
+    border: 3px solid #fbc02d;
+    padding: 0px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 0 0 0px 10px;
+  }
+  .rekomendasi-box .btn-rekomendasi:hover {
+    background-color: #9b111e;
+    color: #fff;
+    border-color: #9b111e;
+  }
+  
+  .rekomendasi-box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .rekomendasi-box .content-rekomendasi {
+    max-width: 100%;
+    order: 1;
+  }
+  
+  .content-rekomendasi i {
+    margin: 2px 0 0px 10px;
+    display: block; /* Pastikan setiap elemen berada di baris baru */
+    margin-bottom: 8px;
+    font-size: 12px;
+    
+  }
+  
+  .content-rekomendasi h1 {
+    font-size: 15px;
+    margin: 0 0 10px 10px;
+  }
+  
+  .rekomendasi-box p {
+    margin: 0 0 8px 10px; 
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    flex: 1 1 auto;
+  }
+  
+  .rekomendasi-box img {
+    max-width: 100%;
+    width: 222px;
+    align-content: center;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    order: 2;
+    margin: 10px 10px 10px 10px;
+  }
+  
+  .row {
+    display: flex; /* Aktifkan flexbox */
+    flex-wrap: wrap; /* Elemen akan dibungkus ke baris baru jika tidak cukup ruang */
+    gap: 20px;
+    /* justify-content: left; Elemen disejajarkan ke kiri */
+  }
+  
+  .row-1 {
+    display: flex; /* Aktifkan flexbox */
+    flex-wrap: wrap; /* Elemen akan dibungkus ke baris baru jika tidak cukup ruang */
+   gap: 20px;
+    justify-content: left; /* Elemen disejajarkan ke kiri */
+    width: 180px;
+  }
+  
+  /* Mengatur rekomendasi-box agar fleksibel */
+  .rekomendasi-box {
+    flex: 0 1 calc(25% - 20px); /* Lebar setiap box menjadi 25% dari container, dengan jarak antar elemen */
+    box-sizing: border-box; /* Pastikan padding dan border dihitung dalam lebar elemen */
+    margin: 15px 0; /* Tambahkan margin atas dan bawah */
+    
+  }
+  
+  /* Responsive Design (opsional) */
+  @media (max-width: 768px) {
+    .rekomendasi-box {
+      flex: 0 1 calc(50% - 20px); /* Lebar box menjadi 50% pada layar kecil */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rekomendasi-box {
+      flex: 0 1 100%; /* Lebar box menjadi 100% pada layar sangat kecil */
+    }
+  
+    .rekomendasi-box:last-child {
+    margin-left: auto; /* Memindahkan elemen terakhir ke sebelah kanan */
+  }
+  }
+  
+  
+  
+  

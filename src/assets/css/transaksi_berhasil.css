@@ -1,0 +1,64 @@
+.success-container {
+    background-color: white;
+    padding: 70px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Set a width to ensure it fits well */
+    max-width: 500px; /* Limit the maximum width */
+    margin: auto; /* Center the container */
+    text-align: center; /* Center text */
+}
+
+.success-container img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.success-container h1 {
+    font-size: 2rem;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.success-container p {
+    color: #000000;
+    font-size: 1.1rem;
+}
+
+.success-container strong {
+    color: #b91d23;
+}
+
+.home-button {
+    background-color: transparent;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 50px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.home-button:hover {
+    color: #ffffff;
+    border-color: #b91d23;
+    background-color: #b91d23;
+}
+
+.success-container {
+    width: 100%; /* Increase the width */
+    max-width: 600px; /* Set a maximum width */
+    height: 400px; /* Set a height */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    background-color: #f9f9f9; /* Optional: Background color */
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+}
+

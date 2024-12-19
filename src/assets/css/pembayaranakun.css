@@ -1,0 +1,144 @@
+/* Progress Circles */
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    padding: 0 30px;
+}
+
+.progress-circle {
+    width: 20px; /* Memperbesar ukuran circle */
+    height: 20px;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 1;
+}
+
+.progress-circle.active {
+    background-color: #000000;
+}
+
+.progress-step-label {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+    width: 120px; /* Lebarkan label agar lebih seimbang */
+}
+
+.progress-line {
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    right: 30px;
+    height: 3px;
+    background-color: #d3d3d3;
+    z-index: 0;
+}
+
+.progress-line-filled {
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    height: 3px;
+    background-color: #000000;
+    z-index: 1;
+    width: 100%; /* Adjust the filled width to match the progress */
+}
+
+/* Countdown Timer */
+.countdown-timer {
+    font-weight: bold;
+    color: #b91d23;
+    font-size: 1.5rem;
+}
+
+/* Form Styling */
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 50px 50px 5px 5px; /* Wider border-radius on left and right */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Label alignment and input styling */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left; /* Menyelarakan label ke kiri */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff9e6; /* Background kuning muda untuk input */
+    color: #333;
+}
+
+.form-group input::placeholder {
+    color: #bbb; /* Warna lebih terang untuk placeholder */
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #b91d23; /* Warna border saat fokus */
+    box-shadow: 0 0 5px rgba(185, 29, 35, 0.5); /* Efek shadow saat fokus */
+}
+
+/* Button Styling */
+.btn-yellow {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Title Alignment */
+.akun-bank-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 100px;
+    flex: 1; /* Memastikan judul dan timer berada pada baris yang sama */
+}
+
+/* Custom Button Styling */
+.btn-small-center {
+    width: 160px;
+    font-size: 1rem;
+    margin: 20px auto; /* Auto margin untuk memusatkan tombol secara horizontal */
+    display: block; /* Pastikan tombol bertindak sebagai elemen block */
+    background-color: white;  /* Warna latar belakang tombol */
+    border: 2px solid #FFD700; /* Border kuning */
+    color: #FFD700; /* Teks kuning */
+    transition: all 0.3s ease;
+    text-align: center; /* Pusatkan teks di dalam tombol */
+    border-radius: 5px;
+}
+.btn-small-center:hover {
+    background-color: #b91d23;
+    border: #b91d23;
+    color: white;
+}
+
+/* Memastikan elemen yang membungkus tombol juga dipusatkan */
+.parent-container {
+    display: flex;
+    justify-content: center;  /* Pusatkan secara horizontal */
+    align-items: center;      /* Pusatkan secara vertikal (opsional) */
+    height: 15vh;            /* Opsional: Pusatkan secara vertikal di seluruh layar */
+}
